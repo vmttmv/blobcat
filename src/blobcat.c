@@ -5,6 +5,7 @@
 #include "blobcat.h"
 
 #include <assert.h>
+#include <stddef.h>
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
@@ -168,14 +169,14 @@ struct elf64_ehdr
 
 struct elf64_shdr
 {
-  uint64_t  sh_name;		/* Section name (string tbl index) */
-  uint64_t	sh_type;		/* Section type */
+  uint32_t 	sh_name;		/* Section name (string tbl index) */
+  uint32_t	sh_type;		/* Section type */
   uint64_t	sh_flags;		/* Section flags */
   uint64_t	sh_addr;		/* Section virtual addr at execution */
   uint64_t	sh_offset;		/* Section file offset */
   uint64_t	sh_size;		/* Section size in bytes */
-  uint64_t	sh_link;		/* Link to another section */
-  uint64_t	sh_info;		/* Additional section information */
+  uint32_t	sh_link;		/* Link to another section */
+  uint32_t	sh_info;		/* Additional section information */
   uint64_t	sh_addralign;	/* Section alignment */
   uint64_t	sh_entsize;		/* Entry size if section holds table */
 };

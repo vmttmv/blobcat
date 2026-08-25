@@ -1,5 +1,7 @@
 #pragma once
 
+#include <stddef.h>
+
 struct bc_obj;
 
 enum bc_format

@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     ADDOBJ(obj, "_sym1", "This is sym1");
     ADDOBJ(obj, "_sym2", "This is sym2\nHello.");
     ADDOBJ(obj, "_sym3", "This is sym3\n\nNOHello.");
-    bc_obj_write(obj, BC_FORMAT_COFF_X64, "foo.obj");
+    bc_obj_write(obj, BC_FORMAT_ELF_X64, "foo.obj");
 
     return 0;
 }
